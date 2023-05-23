@@ -1,0 +1,57 @@
+.header {
+  flex: 1;
+  background-color: gray;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 2px 10px 2px 10px;
+  border: 1px solid black;
+}
+
+.header-second {
+  flex: 1;
+  background-color: gray;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 2px 10px 2px 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-second div:nth-child(1) {
+  flex: 1;
+  background-color: gray;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 2px 10px 2px 10px;
+  border: 1px solid black;
+
+}
+
+.header-second div:nth-child(2) {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  background-color: gray;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 2px 10px 2px 10px;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+
+td {
+  max-width: 100px;
+}
+
+.header.first {
+  position: sticky;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+#fecha_reporte-telefonico {}
+
+#fecha_report-email {}
