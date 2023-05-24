@@ -18,7 +18,12 @@ if (isset($_SESSION['nombre'])) {
 </head>
 
 <body class="d-flex justify-content-center align-items-center vh-100 " style="background-color: #44bcd8;">
+
   <form action="loginProceso.php" method="POST">
+  <div class="text-center fs-4 fw-bold">Registro d Bitacora - ESSI</div>
+  <div class="text-center fs-4 fw-bold">Oficina de Soporte Informatico</div>
+  <div class="text-center fs-4 fw-bold">Red Asistencial Arequipa - Essalud</div>
+
     <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 25rem">
       <div class="d-flex justify-content-center">
         <img src="login/logo/logo.png" alt="login-icon" style="height: 7rem" />
