@@ -42,7 +42,7 @@ if (!isset($_SESSION['nombre'])) {
     <span class="h2">BITACORA ESSI</span>
   </div>
   <p></p>
-  <form action="insertar.php" method="POST" style=" width: 65%; margin: 0 auto;">
+  <form action="insertar.php" method="POST" style=" width: 65%; margin: 0 auto;" id="form">
     <legend class="text-center-success">REGISTRO DE OCURRENCIA</legend>
 
     <div class="input-group mb-3">
@@ -162,7 +162,7 @@ if (!isset($_SESSION['nombre'])) {
     <p></p>
     <div class="form-group">
       <label for="nroCasoMesa">Numero de Caso Mesa de Ayuda:</label>
-      <input type="text" class="form-control" name="nroCasoMesa" onkeypress="return validarKey(event);" id='numero-caso'  disabled=" true" required>
+      <input type="text" class="form-control" name="nroCasoMesa" onkeypress="return validarKey(event);" id='numero-caso' disabled="true>
 
     </div>
     <p></p>
@@ -272,28 +272,60 @@ if (!isset($_SESSION['nombre'])) {
 
         }
       }
+
+
+
       const destinoOnChange = (id) => {
         const reporte_telefonico = document.getElementById("reporte-telefonico");
         const reporte_email = document.getElementById("reporte-email");
         const reporte_whatsapp = document.getElementById("reporte-whatsapp");
         const reporte_formal = document.getElementById("reporte-formal");
         const numero_caso = document.getElementById("numero-caso");
+        console.log(reporte_telefonico.value);
         if (id == 1) {
-          reporte_telefonico.disabled = false;
+
+          if (fechaTelefono.value != "") {
+            reporte_telefonico.disabled = false;
+          }
+          else {
+            reporte_telefonico.disabled = true;
+          }
         }
         else if (id == 2) {
-          reporte_email.disabled = false;
+          if (fechaEmail.value != "") {
+            reporte_email.disabled = false;
+          }
+          else {
+            reporte_email.disabled = true;
+          }
+
         }
         else if (id == 3) {
-          reporte_whatsapp.disabled = false;
+          if (fechaWspp.value != "") {
+            reporte_whatsapp.disabled = false;
+          }
+          else {
+            reporte_whatsapp.disabled = true;
+          }
+
         }
         else if (id == 4) {
-          reporte_formal.disabled = false;
+          if (fechaFormal.value !== "") {
+            reporte_formal.disabled = false;
+          }
+          else {
+            reporte_formal.disabled = true;
+          }
         }
         else if (id == 5) {
-          numero_caso.disabled = false;
-        }
+          if (fechaSoporteMesa.value !== "") {
+            numero_caso.disabled = false;
+          }
+          else {
+            numero_caso.disabled = true;
+          }
       }
+    }
     </script>
 
   </form>
