@@ -15,16 +15,16 @@ $detalle = $_POST['detalle'];
 $responsable = $_SESSION['nombre'];
 $UsuarioR = $_POST['UsuarioR'];
 $fechasoporteessi = $_POST['fechasoporteessi'];
-$fechasoportemesa = isset($_POST['fechasoportemesa']);
-$nroCasoMesa = isset($_POST['nroCasoMesa']);
-$fechaTelef = isset($_POST['fechaTelef']);
-$destinoTelef = isset($_POST['destinoTelef']);
-$fechaEmail = isset($_POST['fechaEmail']);	
-$destinoEmail = isset($_POST['destinoEmail']);
-$fechaWspp = isset($_POST['fechaWspp']);
-$destinoWspp = isset($_POST['destinoWspp']);
-$fechaFormal = isset($_POST['fechaFormal']);
-$destinoFormal = isset($_POST['destinoFormal']);
+$fechasoportemesa = isset($_POST['fechasoportemesa'])?$_POST['fechasoportemesa']:"";
+$nroCasoMesa = isset($_POST['nroCasoMesa'])?$_POST['nroCasoMesa']:"";
+$fechaTelef = isset($_POST['fechaTelef'])?$_POST['fechaTelef']:"";
+$destinoTelef = isset($_POST['destinoTelef'])?$_POST['destinoTelef']:"";
+$fechaEmail = isset($_POST['fechaEmail'])?$_POST['fechaEmail']:"";
+$destinoEmail = isset($_POST['destinoEmail'])?$_POST['destinoEmail']:"";
+$fechaWspp = isset($_POST['fechaWspp'])?$_POST['fechaWspp']:"";
+$destinoWspp = isset($_POST['destinoWspp'])?$_POST['destinoWspp']:"";
+$fechaFormal = isset($_POST['fechaFormal'])?$_POST['fechaFormal']:"";
+$destinoFormal = isset($_POST['destinoFormal'])?$_POST['destinoFormal']:"";
 
 $consulta = $pdo->prepare("INSERT INTO bitacora(Fecha_ocurrencia,Hora_ocurrencia,fecha_registro,hora_registro, CAS,essi_explota,modulo,detalle,responsable,usuario_reporte,fecha_essi_soporte,fecha_mesa_soporte,num_caso_mesa_ayuda,fecha_reporte_telefono,
     destino_reporte_telefono,fecha_reporte_email,destino_reporte_email,fecha_reporte_whatsapp,destino_reporte_whatsapp,fecha_reporte_formal,destino_reporte_formal) 
